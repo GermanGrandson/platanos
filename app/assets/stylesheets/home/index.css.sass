@@ -1,20 +1,15 @@
 body
   margin: 0px
 
-.navbar
-  height: 50px
-  background-color: #fff
-  box-shadow: black
-  color: #4abdac
-
 .container
 
   .coming-soon
     background-image: asset-url('beer.jpg')
-    height: 700px
+    height: 750px
     background-size: cover
     background-repeat: no-repeat
     background-position-y: -60px
+    background-attachment: fixed
 
     .slogan
       text-align: center
@@ -23,26 +18,29 @@ body
       color: #fff
       text-transform: capitalize
       padding-top: 30px
+      cursor: default
 
 
     .name
-      margin: 0 auto
-      width: 73%
+      // margin: 0 auto
+      // width: 73%
       padding-top: 120px
+      text-align: center
 
       .chela
         font-size: 250px
         font-family: 'Varela Round', sans-serif
         color: #fff
-        display: inline-block
-        width: 90%
+        cursor: default
+        // display: inline-block
+        // width: 90%
 
-      .beercap
+      // .beercap
         height: 100px
         display: inline-block
         width: 8%
 
-        .image
+        // .image
           margin-top: 47px
           height: 55px
           background-image: asset-url('bottle-cap-outline.png')
@@ -69,12 +67,170 @@ body
           input
             width: 112%
             height: 70px
-            font-size: 30px
+            font-size: 24px
             border-radius: 10px 0px 0px 10px
             background-color: #4abdac
             border: none
             color: #fff
-            font-family: 'Varela Round', sans-serif
+            font-family: 'avenir-light'
+            text-align: center
+            letter-spacing: 3px
+            padding-left: 10px
+            border-right: solid 3px #fff
+
+          ::-webkit-input-placeholder
+            color: #fff
+
+
+        .image
+          // margin-top: 47px
+          height: 55px
+          background-image: asset-url('bottle-cap-outline.png')
+          background-repeat: no-repeat
+          background-size: contain
+          display: inline-block
+          width: 7%
+          vertical-align: top
+          margin: 8px 0px 0px 15px
+          cursor: pointer
+          transition: 300ms
+
+          &:hover
+            height: 53px
+            transition: 300ms
+
+  .flags
+    // height: 400px
+    font-size: 0
+
+    .flag
+      display: inline-block
+      height: 210px
+      width: 25%
+      vertical-align: top
+      background-repeat: no-repeat
+      background-size: cover
+      // background-position: center
+
+    #one
+      background-image: asset-url('colombia.jpg')
+
+    #two
+      background-image: asset-url('greece.png')
+
+    #three
+      background-image: asset-url('norway.png')
+
+    #four
+      background-image: asset-url('southafrica.png')
+
+    #five
+      background-image: asset-url('india.jpg')
+
+    #six
+      background-image: asset-url('kazakhstan.png')
+
+    #seven
+      background-image: asset-url('uk.png')
+      background-position: center
+
+    #eight
+      background-image: asset-url('peru.jpg')
+
+    #nine
+      background-image: asset-url('switzerland.jpeg')
+
+    #ten
+      background-image: asset-url('wales.png')
+
+
+  .about
+    height: 700px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position-y: -60px
+
+    .quote
+      font-family: 'Josefin sans'
+      text-align: center
+      font-size: 30px
+      padding-top: 50px
+
+
+    .whatischela
+      font-family: 'varela round', sans-serif
+      text-align: center
+      font-size: 100px
+      padding-top: 50px
+
+    .description
+      margin: 0 auto
+      width: 50%
+
+      .description-text
+        text-align: center
+        font-size: 24px
+        letter-spacing: 2px
+        font-family: 'avenir-light'
+        // text-align: justify
+
+    .icons-section
+      padding-top: 50px
+      font-size: 0
+      font-family: 'avenir-light'
+      width: 85%
+      margin: 0 auto
+
+      .icon
+        display: inline-block
+        width: 31%
+        // height: 100px
+        // border: solid green 1px
+        font-size: 70px
+        text-align: center
+        vertical-align: top
+        padding: 0px 10px 0px 10px
+
+        .icon-text
+          font-size: 16px
+
+  .future
+    // height: 200px
+    background-color: #4abdac
+
+    .announcements
+      text-align: center
+      font-size: 30px
+      font-family: 'varela round'
+      color: #fff
+      padding-top: 50px
+
+    .signup
+      margin: 0 auto
+      width: 67%
+      padding: 50px 0px 50px 0px
+
+      .email-input
+        width: 100%
+        display: inline-block
+        background-color: #fc4a1a
+        border-radius: 10px
+
+        .input
+          display: inline-block
+          width: 89%
+
+          border-radius: 10px
+
+          input
+            width: 112%
+            height: 70px
+            font-size: 24px
+            border-radius: 10px 0px 0px 10px
+            background-color: #fc4a1a
+            border: none
+            color: #fff
+            font-family: 'avenir-light'
             text-align: center
             letter-spacing: 3px
             padding-left: 10px

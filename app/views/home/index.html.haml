@@ -2,10 +2,10 @@
 
 .container
   .coming-soon
-    .slogan Enjoy the world, one sip at a time
+    .slogan Travel the world, one sip at a time
     .name
-      .chela CHELA
-      .beercap
+      .chela Chela
+      -# .beercap
         .image
 
     .signup
@@ -14,5 +14,38 @@
           .input
             = f.input :email, label: false, placeholder: 'Enter your email for future announcements!'
           .image
+
+  .flags
+    .flag#one
+    .flag#two
+    .flag#three
+    .flag#four
+    .flag#five
+    .flag#six
+    .flag#seven
+    .flag#eight
+
   .about
-    .whatischela What is Chela?
+    .quote “He was a wise man who invented beer.” - Plato
+    .whatischela So... What is Chela?
+    .description
+      .description-text Have you ever wondered what kind of craft beers exist around the world, or better yet what they taste like? Chela is here to clear that up for you!
+    .icons-section
+      .icon
+        %i.fa.fa-globe
+        .icon-text We search the world for the most interesting and delicious craft beers
+      .icon
+        %i.fa.fa-beer
+        .icon-text Each month you receive either a 12 or 24 pack of craft beers from carefully selected breweries
+      .icon
+        %i.fa.fa-heart-o
+        .icon-text You expand your pallet and gain world knowledge as well. Enjoy your beer your earned it
+
+  .future
+    .announcements Sign up and stay up to date for future announcements!
+    .signup
+      = simple_form_for(:customer) do |f|
+        .email-input
+          .input
+            = f.input :email, label: false, placeholder: 'Sign Up!'
+          .image
