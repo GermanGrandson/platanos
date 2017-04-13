@@ -7,13 +7,14 @@
       .chela Chela
       -# .beercap
         .image
-
+    .thankyou Thank you! Watch out for future updates.
     .signup
-      = simple_form_for(:customer) do |f|
+      = simple_form_for(:customer, url: save_path, method: 'get') do |f|
         .email-input
           .input
-            = f.input :email, label: false, placeholder: 'Enter your email for future announcements!'
-          .image
+            = f.input :email, label: false, placeholder: 'Enter your email for future announcements!', class: 'submit-top'
+          .image-top
+        .error-top Please enter a valid email
 
   .flags
     .flag#one
@@ -29,23 +30,74 @@
     .quote “He was a wise man who invented beer.” - Plato
     .whatischela So... What is Chela?
     .description
-      .description-text Have you ever wondered what kind of craft beers exist around the world, or better yet what they taste like? Chela is here to clear that up for you!
+      .description-text Have you ever wondered what kind of craft beers exist around the world, or better yet what they taste like? Well now there is no need to travel the world to find out!
+      %br
+      .description-text Chela delivers a handful of craft beers from a different country every month. Chela is not fully launched yet but make sure to sign up for future announcements!
     .icons-section
       .icon
         %i.fa.fa-globe
-        .icon-text We search the world for the most interesting and delicious craft beers
+        .icon-text#globe In 2015 there were over 10,000 breweries around the world! We search the world for the most interesting and delicious craft beers
       .icon
         %i.fa.fa-beer
-        .icon-text Each month you receive either a 12 or 24 pack of craft beers from carefully selected breweries
+        .icon-text#beer Each month you receive a 12 or 24 pack of craft beers from carefully select breweries of all sizes from around the world
       .icon
         %i.fa.fa-heart-o
-        .icon-text You expand your pallet and gain world knowledge as well. Enjoy your beer your earned it
+        .icon-text#heart You expand your pallet and gain world knowledge at the same time. Enjoy your beer your earned it!
 
   .future
-    .announcements Sign up and stay up to date for future announcements!
+    .announcements Sign up and stay up to date for future announcements
+
+    .thankyou#bottom Thank you! Watch out for future updates.
     .signup
       = simple_form_for(:customer) do |f|
         .email-input
           .input
-            = f.input :email, label: false, placeholder: 'Sign Up!'
-          .image
+            = f.input :email2, label: false, placeholder: 'Sign Up!'
+          .image-bottom
+        .error-bottom Please enter a valid email
+
+:javascript
+
+  $(function(){
+    $('.image-top').click(function(e){
+      if($('input#customer_email').val().length < 7){
+        $('.error-top').fadeIn();
+        return false;
+      }
+
+      var data = $('input#customer_email').val();
+      $.ajax({
+        url: '/save',
+        type: 'post',
+        data: {email: data}
+      });
+      $('.email-input').hide();
+      $('.announcements').hide();
+      $('.error-top').hide();
+      $('.signup').hide();
+      $('.thankyou').fadeIn();
+    })
+  })
+
+
+
+
+    $(function(){
+      $('.image-bottom').click(function(e){
+        if($('input#customer_email2').val().length < 7){
+          $('.error-bottom').fadeIn();
+          return false;
+        }
+
+        var data = $('input#customer_email2').val();
+        $.ajax({
+          url: '/save',
+          type: 'post',
+          data: {email: data}
+        });
+      $('.email-input').hide();
+      $('.announcements').hide();
+      $('.error-bottom').hide();
+      $('.thankyou').fadeIn();
+      })
+    })

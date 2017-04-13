@@ -48,6 +48,13 @@ body
           background-size: contain
           // width: %
           // background-position: right
+    .thankyou
+      text-align: center
+      font-size: 30px
+      color: #fff
+      font-family: 'varela round'
+      display: none
+
     .signup
       margin: 0 auto
       width: 67%
@@ -61,7 +68,6 @@ body
         .input
           display: inline-block
           width: 89%
-
           border-radius: 10px
 
           input
@@ -82,7 +88,7 @@ body
             color: #fff
 
 
-        .image
+        .image-top
           // margin-top: 47px
           height: 55px
           background-image: asset-url('bottle-cap-outline.png')
@@ -99,8 +105,15 @@ body
             height: 53px
             transition: 300ms
 
+      .error-top
+        color: #fff
+        text-align: center
+        font-size: 20px
+        font-family: 'avenir-light'
+        padding-top: 20px
+        display: none
+
   .flags
-    // height: 400px
     font-size: 0
 
     .flag
@@ -145,17 +158,20 @@ body
 
 
   .about
-    height: 700px
+    background-image: asset-url('beertaps.jpg')
+    background-color: #b20b0b
     background-size: cover
     background-repeat: no-repeat
-    background-position-y: -60px
+    background-attachment: fixed
+    // background-position-y: -60px
+    color: #fff
+    // -webkit-filter: grayscale(100%)
 
     .quote
       font-family: 'Josefin sans'
       text-align: center
       font-size: 30px
       padding-top: 50px
-
 
     .whatischela
       font-family: 'varela round', sans-serif
@@ -165,17 +181,18 @@ body
 
     .description
       margin: 0 auto
-      width: 50%
+      width: 58%
+      padding: 50px 0px 50px 0px
 
       .description-text
         text-align: center
         font-size: 24px
-        letter-spacing: 2px
+        letter-spacing: 1px
         font-family: 'avenir-light'
-        // text-align: justify
+        font-weight: 100
 
     .icons-section
-      padding-top: 50px
+      padding-bottom: 50px
       font-size: 0
       font-family: 'avenir-light'
       width: 85%
@@ -184,8 +201,6 @@ body
       .icon
         display: inline-block
         width: 31%
-        // height: 100px
-        // border: solid green 1px
         font-size: 70px
         text-align: center
         vertical-align: top
@@ -193,6 +208,10 @@ body
 
         .icon-text
           font-size: 16px
+          line-height: 30px
+
+        // .fa-heart-o
+          color: #e20b0b
 
   .future
     // height: 200px
@@ -204,6 +223,16 @@ body
       font-family: 'varela round'
       color: #fff
       padding-top: 50px
+
+    .thankyou
+      text-align: center
+      font-size: 30px
+      color: #fff
+      font-family: 'varela round'
+      display: none
+
+      &#bottom
+        padding: 50px 0px 50px 0px
 
     .signup
       margin: 0 auto
@@ -240,7 +269,7 @@ body
             color: #fff
 
 
-        .image
+        .image-bottom
           // margin-top: 47px
           height: 55px
           background-image: asset-url('bottle-cap-outline.png')
@@ -256,3 +285,11 @@ body
           &:hover
             height: 53px
             transition: 300ms
+
+      .error-bottom
+        color: #fff
+        text-align: center
+        font-size: 20px
+        font-family: 'avenir-light'
+        padding-top: 20px
+        display: none
