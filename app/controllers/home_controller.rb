@@ -5,10 +5,8 @@ class HomeController < ApplicationController
   end
 
   def save_email
-    # binding.pry
-    @email = params[:customer][:email]
-    # User.create(email: @email)
-    # render nothing: true
+    User.create(email: @email)
+    render nothing: true
   end
 
 end
