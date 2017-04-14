@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   end
 
   def save_email
+    @email = params[:email]
     User.create(email: @email)
     render nothing: true
   end
